@@ -18,8 +18,30 @@ class DatabaseSeeder extends Seeder
 //         Role::create(['name'=>'patient']);
         // $this->call(UsersTableSeeder::class);
         User::create([
-            'name' => 'John Doe',
+            'name' => 'John Doe Patient',
             'email' => 'clinic@patient.com',
+            'password' => bcrypt('password'),
+            'role_id' => 3,
+            'gender' => 'non-binary'
+        ]);
+        User::create([
+            'name' => 'John Doe Doctor',
+            'email' => 'john_clinic@doctor.com',
+            'password' => bcrypt('password'),
+            'role_id' => 3,
+            'gender' => 'non-binary'
+        ]);
+        
+        User::create([
+            'name' => 'Jane Doe Doctor',
+            'email' => 'jane_clinic@doctor.com',
+            'password' => bcrypt('password'),
+            'role_id' => 3,
+            'gender' => 'non-binary'
+        ]);
+        User::create([
+            'name' => 'John Doe Admin',
+            'email' => 'clinic@admin.com',
             'password' => bcrypt('password'),
             'role_id' => 3,
             'gender' => 'non-binary'
