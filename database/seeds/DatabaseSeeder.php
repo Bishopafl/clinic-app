@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'John Doe',
             'email' => 'clinic@patient.com',
             'password' => bcrypt('password'),
-            'role_id' => 3
+            'role_id' => 3,
+            'gender' => 'non-binary'
         ]);
     }
 }
