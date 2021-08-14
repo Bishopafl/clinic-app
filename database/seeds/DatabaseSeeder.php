@@ -12,9 +12,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Role::create(['name'=>'doctor']);
-        Role::create(['name'=>'admin']);
-        Role::create(['name'=>'patient']);
+//         Role::create(['name'=>'doctor']);
+//         Role::create(['name'=>'admin']);
+//         Role::create(['name'=>'patient']);
         // $this->call(UsersTableSeeder::class);
+        User::create([
+            'name' => 'John Doe',
+            'email' => 'clinic@patient.com',
+            'password' => bcrypt('password')
+        ]);
     }
 }
